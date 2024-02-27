@@ -1,0 +1,3 @@
+git init = inicializar repositorio
+git config -l = exibe as config
+git config  --global user.(name/mail) = define o email/nome do usuário
