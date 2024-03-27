@@ -7,4 +7,4 @@ git add <arquivo> = adiciona um arquivo para o próximo commit
 git add . = adiciona todos os arquivos (untracked e modified) para o próximo commit
 git commit -m = commita todos os arquivos para o repositorio remoto e adiciona uma mensagem
 git remote add origin = adiciona uma origem do repositorio remoto
-git push -M main = empurra todos os arquivos para o repositorio origem
+git push -u origin main = empurra todos os arquivos para o repositorio origem
