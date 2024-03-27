@@ -5,3 +5,5 @@ git clone = faz o download de um repositorio remoto
 git status = apresenta o status do repositorio
 git add <arquivo> = adiciona um arquivo para o próximo commit
 git add . = adiciona todos os arquivos (untracked e modified) para o próximo commit
+git commit -m = commita todos os arquivos para o repositorio
+git remote add origin = 
