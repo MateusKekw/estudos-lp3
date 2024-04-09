@@ -91,8 +91,25 @@ print(calcula_medias(notas_alunos))
 
 print('Olá ', ' Mundo', sep='PEWNEWNEW')
 
+# Valores padrão para os parâmetros
 
+def obter_saudacao(nome, saudacao='Bom Dia'):
+    return f'{saudacao}, {nome}!'
 
+print(obter_saudacao('Mateus'))
+# *args (Non-Keyword Arguments)
 
+def calcular_mediaaaa(notas):
+    return sum(notas)/len(notas)
 
+print(calcular_mediaaaa([10.0, 5.0, 2.0, 9.0]))
+
+print(calcular_mediaaaa((10.0, 5.0, 2.0, 9.0)))
+
+def calcular_mediaaaa2(*notas):
+    return sum(notas)/len(notas)
+
+print(calcular_mediaaaa2(10.0, 5.0, 2.0, 9.0, 10.0))
+
+print(calcular_mediaaaa2(10.0, 5.0, 2.0, 9.0, 3.3, 6.2, 2.9, 10.0))
 
