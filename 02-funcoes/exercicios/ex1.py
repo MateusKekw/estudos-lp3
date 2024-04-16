@@ -3,39 +3,28 @@ Informe ao usuário se o palpite está alto ou baixo, até que ele acerte o núm
 
 import random
 
-
-num = random.randint(1, 100)
-
-chute = int(input('Adivinhe um número inteiro entre 1 e 100: '))
-
-def adivinha_maior(chute, num):
-    if chute < num:
-        chute = int(input('Tente um número maior: '))
+def jogo_adivinhar_numero():
     
-def adivinha_menor(chute, num):
-    if chute > num:
-        chute = int(input('Tente um número menor: '))
-
-def numero_fora(chute, num):
-    if chute > 100 or chute < 1:
-        return'Sua tentativa foi para fora da área'
-
-def numero_correto(chute, num):
-    if chute == num:
-        return 'parabéns você acertou o número'
-
-while chute != num:
-
-    if num > chute:
-        print(adivinha_maior(chute, num))
-
-    if num < chute:
-        print(adivinha_menor(chute, num))
-
-    print(numero_fora(chute, num))
-    print(numero_correto(chute, num))
+    numero_secreto = random.randint(1, 100)
+    
+    print("Adivinhe o número secreto entre 1 e 100!")
+    
+    while True:
+        # Pede ao usuário para digitar um palpite
+        try:
+            palpite = int(input("Digite seu palpite: "))
+        except ValueError:
+            print("Por favor, digite um número válido.")
+            continue
+        
+        # Verifica se o palpite está correto, muito alto ou muito baixo
+        if palpite < numero_secreto:
+            print("Seu palpite está muito baixo.")
+        elif palpite > numero_secreto:
+            print("Seu palpite está muito alto.")
+        else:
+            print(f"Parabéns! Você adivinhou o número secreto: {numero_secreto}")
+            break
 
 
-
-
-
+jogo_adivinhar_numero()
